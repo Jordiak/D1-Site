@@ -1,19 +1,67 @@
-{{!-- This is the base layout for your project, and will be used on every page unless specified. --}}
-
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>D1 Men's Skincare</title>
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <!-- Preconnect to speed up font requests -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Load the fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   </head>
 <body>
 
-{{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+
+<div class="grid-x">
+  <div class="large-12 cell">
+    <div class="text-center bg-primary font-bold text-xs p-1">
+      FREE SHIPPING ON US ORDERS OVER $100
+    </div>
+  </div>
+</div>
+
+<div class="top-bar">
+  <div class="left">
+    <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
+    <img src="../assets/img/Combined Shape-3.svg" alt="MySite Logo" style="height:50px;">
+  </div>
+  <div class="right">
+    <a href="#" class="button custom-nav my-2">GET STARTED</a>
+    <a href="#" class="my-2">
+      <img src="../assets/img/Bitmap.png" alt="Cart" style="height:30px;">
+    </a>
+  </div>
+</div>
+
+<div class="off-canvas position-right bg-black" id="offCanvas" data-off-canvas>
+  <ul class="vertical menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
 {{> body}}
 
 <script src="{{root}}assets/js/app.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+  var flkty = new Flickity('.js-flickity', {
+    wrapAround: true,
+    cellAlign: 'center',
+    //autoPlay: 2000,
+    pauseAutoPlayOnHover: true,
+    imagesLoaded: true,
+    contain: true,
+    prevNextButtons: true,
+    pageDots: false,
+  });
+</script>
 </body>
 </html>

@@ -22,16 +22,17 @@ The challenge was designed to assess:
 
 ## Installation
 
+Execute the following commands
+
 ```bash
 git clone https://github.com/Jordiak/D1-Site.git
-npm install
 cd d1-site
+npm install
 ```
 
-Finally, run `npm start` to run the site.
+Finally, run the command `npm start` to initialize the site. The site will display at:
 
 ```
-This will display at
 http://localhost:8000
 ```
 
